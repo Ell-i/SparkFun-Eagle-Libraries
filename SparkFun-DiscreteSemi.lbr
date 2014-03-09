@@ -821,6 +821,20 @@ http://www.vishay.com/docs/71151/71151.pdf</description>
 <wire x1="-1.5" y1="0.8" x2="-1.5" y2="-0.8" width="0.2032" layer="21"/>
 <circle x="-1.7" y="-1.2" radius="0.14141875" width="0.2032" layer="21"/>
 </package>
+<package name="SOD-123FL">
+<wire x1="1.778" y1="0.635" x2="-1.8034" y2="0.635" width="0.1016" layer="51"/>
+<wire x1="1.778" y1="-0.635" x2="-1.778" y2="-0.635" width="0.1016" layer="51"/>
+<wire x1="0.7032" y1="0.6" x2="-0.3476" y2="0" width="0.2032" layer="21"/>
+<wire x1="-0.3476" y1="0" x2="0.7032" y2="-0.6" width="0.2032" layer="21"/>
+<wire x1="0.7032" y1="-0.6" x2="0.7032" y2="0.6" width="0.2032" layer="21"/>
+<wire x1="-1.8034" y1="0.635" x2="-1.8034" y2="-0.635" width="0.1016" layer="51"/>
+<wire x1="1.778" y1="0.635" x2="1.778" y2="-0.635" width="0.1016" layer="51"/>
+<rectangle x1="-1.0414" y1="-0.7874" x2="-0.4318" y2="0.7874" layer="21"/>
+<rectangle x1="-1.5748" y1="-0.635" x2="-1.3208" y2="0.635" layer="51"/>
+<smd name="A" x="1.6383" y="0" dx="0.9144" dy="1.2192" layer="1"/>
+<smd name="C" x="-1.6383" y="0" dx="0.9144" dy="1.2192" layer="1"/>
+<text x="0" y="0" size="0.381" layer="25" align="center">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="BAV99">
@@ -2103,6 +2117,17 @@ http://www.vishay.com/docs/71151/71151.pdf</description>
 <text x="-7.62" y="13.462" size="1.778" layer="95">&gt;NAME</text>
 <text x="-7.62" y="-17.78" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
+<symbol name="D">
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<text x="2.54" y="0.4826" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.3114" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="BAV99" prefix="D" uservalue="yes">
@@ -3297,6 +3322,29 @@ MMDT3904- TRANS-09373 (SOT-363, 200mA 40V)&lt;br&gt;</description>
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="TRANS-11993"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MBR120" prefix="D">
+<description>&lt;h3&gt;Schottky Diode:MBR120&lt;/h3&gt;
+
+20V 1A SOD123FL
+&lt;br&gt;&lt;br&gt;
+&lt;a href="http://www.mouser.com/ds/2/308/MBR120VLSFT1-D-107081.pdf"&gt;Datasheet&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="D" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOD-123FL">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="VALUE" value="MBR120VLSFT1G" constant="no"/>
 </technology>
 </technologies>
 </device>
