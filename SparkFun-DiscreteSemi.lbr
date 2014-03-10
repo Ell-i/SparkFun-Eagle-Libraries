@@ -2196,10 +2196,11 @@ DIO-10647</description>
 <deviceset name="DIODE-SCHOTTKY" prefix="D">
 <description>Schottky diodes in SFE's production catalog&lt;p&gt;
 
-BAT20J 1A 23V 0.62Vf&lt;br&gt;
-RB751 120mA 40V 0.37Vf&lt;br&gt;
-PMEG4005EJ 0.5A 40V 0.42Vf&lt;br&gt;
-MBRA140 1A 40V 0.5Vf</description>
+BAT20J - 1A 23V 0.62Vf&lt;br&gt;
+RB751 - 120mA 40V 0.37Vf&lt;br&gt;
+PMEG4005EJ - 0.5A 40V 0.42Vf&lt;br&gt;
+MBRA140 - 1A 40V 0.5Vf&lt;br&gt;
+MBR120 - 20V 1A SOD123FL (&lt;a href="http://www.mouser.com/ds/2/308/MBR120VLSFT1-D-107081.pdf"&gt;Datasheet&lt;/a&gt;)</description>
 <gates>
 <gate name="G$1" symbol="DIODE-SCHOTTKY" x="0" y="0"/>
 </gates>
@@ -2249,6 +2250,17 @@ MBRA140 1A 40V 0.5Vf</description>
 <technology name="">
 <attribute name="PROD_ID" value="DIO-10955" constant="no"/>
 <attribute name="VALUE" value="PMEG4005EJ" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-MBR120" package="SOD-123FL">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="VALUE" value="MBR120" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3322,29 +3334,6 @@ MMDT3904- TRANS-09373 (SOT-363, 200mA 40V)&lt;br&gt;</description>
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="TRANS-11993"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MBR120" prefix="D">
-<description>&lt;h3&gt;Schottky Diode:MBR120&lt;/h3&gt;
-
-20V 1A SOD123FL
-&lt;br&gt;&lt;br&gt;
-&lt;a href="http://www.mouser.com/ds/2/308/MBR120VLSFT1-D-107081.pdf"&gt;Datasheet&lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="D" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOD-123FL">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="VALUE" value="MBR120VLSFT1G" constant="no"/>
 </technology>
 </technologies>
 </device>
